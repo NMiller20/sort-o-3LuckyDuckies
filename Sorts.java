@@ -8,7 +8,7 @@ public class Sorts{
   //precond: lo < hi && size > 0
   //postcond: returns an ArrayList of random integers
   //          from lo to hi, inclusive
-  public static ArrayList populate( int size, int lo, int hi ) {
+  public ArrayList populate( int size, int lo, int hi ) {
     ArrayList<Integer> retAL = new ArrayList<Integer>();
     while( size > 0 ) {
       //     offset + rand int on interval [lo,hi]
@@ -20,7 +20,7 @@ public class Sorts{
 
 
   //randomly rearrange elements of an ArrayList
-  public static void shuffle( ArrayList al ) {
+  public void shuffle( ArrayList al ) {
     int randomIndex;
     for( int i = al.size()-1; i > 0; i-- ) {
       //pick an index at random
@@ -32,14 +32,14 @@ public class Sorts{
 
 
 // swapping
-public static void swapInsert(ArrayList<Comparable> data, int i){ // here, swap means to swap stated index with the one below it
+public void swapInsert(ArrayList<Comparable> data, int i){ // here, swap means to swap stated index with the one below it
   Comparable tempStorage = data.get(i);
   data.set(i, data.get(i-1));  // resets what's in i
   data.set(i-1, tempStorage);  // resets whats in i-1
 }
 
 //   moving elements within each pass
-public static void walkElement(ArrayList<Comparable> data, int index) {
+public void walkElement(ArrayList<Comparable> data, int index) {
  for (int i = index; i > 0; i--){
    Comparable a = data.get(i);
    Comparable b = data.get(i-1);
@@ -52,7 +52,7 @@ public static void walkElement(ArrayList<Comparable> data, int index) {
 }
 //~~~~~~~~~~~~~~~~~~~ HELPER METHODS END ~~~~~~~~~~~~~~~~~~~
   
-  public static void insertionSortV(ArrayList<Comparable> data){
+  public void insertionSortV(ArrayList<Comparable> data){
   for ( int pass = 1; pass < data.size(); pass++ ){ // pass both the number of elements that are sorted so far,
                                                       // and the index of the element that is about to be walked to the correct place
       walkElement(data, pass);
@@ -62,7 +62,7 @@ public static void walkElement(ArrayList<Comparable> data, int index) {
 }
   
   
-  public static void selectionSortV( ArrayList<Comparable> data )
+  public void selectionSortV( ArrayList<Comparable> data )
   {
      // position of the greatest value
     //note: this version places greatest value at "rightmost" end
@@ -90,7 +90,7 @@ public static void walkElement(ArrayList<Comparable> data, int index) {
   }//end selectionSort
   
   
-  public static void bubbleSortV( ArrayList<Comparable> data )
+  public void bubbleSortV( ArrayList<Comparable> data )
     { for (int p = 0; p < data.size() - 1; p++) {
         for (int i = 0; i < data.size() - 1; i++) {
             Comparable a = data.get(i); //gets value at index i

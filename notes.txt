@@ -1,0 +1,12 @@
+To do:
+Refactor to use helper functions (run to ensure functionality)
+- Add counters for swap, pass, compare (run it)
+- Write code processing/displaying info from the counters about swap, pass, compare, and run
+- best case? worst case? for each method
+- Are the algorithms themselves as efficient as possible?
+
+Implementation considerations:
+- How to assess worst case/best case empirically (if we need to)
+- We decided to make the counters values that are returned as an array for every function that modifies data, rather than as
+  variables of each instance of Sorts, because if we did them as variables of Sorts, each instance of Sorts would only be able to
+  run each function once

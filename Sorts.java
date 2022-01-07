@@ -112,6 +112,7 @@ public int[] walkElement(ArrayList<Comparable> data, int index) {
     int passCounter = 0;
     int compareCounter = 0;
     int swapCounter = 0;
+    System.out.println("Initial values of swap, compare, pass: "+swapCounter+ " "+compareCounter+" "+passCounter);
     for(int pass = data.size()-1; pass > 0; pass--) { // refers to the index that will be sorted
       System.out.println( "\nbegin pass " + (data.size()-pass) );//diag
       int maxPos = 0;
@@ -119,18 +120,24 @@ public int[] walkElement(ArrayList<Comparable> data, int index) {
         for(int i = pass; i > -1; i--) {
         	if ( data.get(maxPos).compareTo(data.get(i))==-1 ){
         		maxPos = i;
-            swapCounter += 1;
+            compareCounter += 1;
+          System.out.println("Compares so far: " +compareCounter);
         	}
-          compareCounter += 1;
+        
+          
         }
         System.out.println( "maxPos: " + maxPos );// this for loop resets maxPos to the next value
       	System.out.println( data );//diag
         // now, we need to swap the highest value with whatever's in the highest index
 
         swap(data, pass, maxPos);
+        swapCounter+=1;
+         System.out.println("Swaps so far: " +swapCounter);
 
         System.out.println( "after swap: " +  data );//diag
         passCounter += 1;
+        System.out.println("Passes so far: "+passCounter);
+        
     }
     int[] counters = {compareCounter, swapCounter, passCounter};
     return counters;

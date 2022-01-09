@@ -68,12 +68,17 @@ public int[] walkElement(ArrayList<Comparable> data, int index) {
   int compareCounter = 0;
   int swapCounter = 0;
  for (int i = index; i > 0; i--){
+   System.out.println(" ---------> Compares so far: " +compareCounter);
+   System.out.println(data);
    Comparable a = data.get(i);
    Comparable b = data.get(i-1);
    compareCounter+=1;
    if (b.compareTo(a) == 1){ // We are comparing consecutive elemnts. If the left element is greater than the right element, we need to swap
      swap(data, i, i-1);
      swapCounter += 1;
+     System.out.println(" ---------> Swaps so far: " +swapCounter);
+
+    System.out.println( " ---------> after swap: " +  data );//diag
    } else { // makes things more efficient by avoiding extra swaps
      int[] counters = {compareCounter, swapCounter};
      return counters;
@@ -88,12 +93,16 @@ public int[] walkElement(ArrayList<Comparable> data, int index) {
     int passCounter = 0;
     int compareCounter = 0;
     int swapCounter = 0;
+    System.out.println("Initial values of swap, compare, pass: "+swapCounter+ " "+compareCounter+" "+passCounter);
     for ( int partition = 1; partition < data.size(); partition++ ){ // pass both the number of elements that are sorted so far,
                                                       // and the index of the element that is about to be walked to the correct place
       int[] returned = walkElement(data, partition);
       compareCounter+= returned[0];
+      System.out.println("Compares so far: "+compareCounter);
       swapCounter += returned[1];
-      passCounter+=1;
+      System.out.println("swaps so far: "+swapCounter);
+      passCounter+=1;System.out.println("Passes so far: "+passCounter);
+
       System.out.println("index of partition (pass number): " + partition); //diag
       System.out.println(data); //diag
     }
@@ -123,8 +132,8 @@ public int[] walkElement(ArrayList<Comparable> data, int index) {
             compareCounter += 1;
           System.out.println("Compares so far: " +compareCounter);
         	}
-        
-          
+
+
         }
         System.out.println( "maxPos: " + maxPos );// this for loop resets maxPos to the next value
       	System.out.println( data );//diag
@@ -137,7 +146,7 @@ public int[] walkElement(ArrayList<Comparable> data, int index) {
         System.out.println( "after swap: " +  data );//diag
         passCounter += 1;
         System.out.println("Passes so far: "+passCounter);
-        
+
     }
     int[] counters = {compareCounter, swapCounter, passCounter};
     return counters;
@@ -149,7 +158,7 @@ public int[] walkElement(ArrayList<Comparable> data, int index) {
     int passCounter = 0;
     int compareCounter = 0;
     int swapCounter = 0;
-
+    System.out.println("Initial values of swap, compare, pass: "+swapCounter+ " "+compareCounter+" "+passCounter);
 
       for (int p = 0; p < data.size() - 1; p++) { // iterates through each pass
         //for each pass, reset counter to 0.
@@ -162,15 +171,22 @@ public int[] walkElement(ArrayList<Comparable> data, int index) {
                 swap(data, i, i+1);
                 sorted = false;
                 swapCounter+=1;
+
+                System.out.println("Swaps so far: " +swapCounter);
+
+               System.out.println( "after swap: " +  data );//diag
             } // end if
             compareCounter+=1;
+            System.out.println("Compares so far: "+compareCounter);
         } // end second loop
         if(sorted==true){
           passCounter+=1;
+          System.out.println("Passes so far: "+passCounter);
           int[] counters = {compareCounter, swapCounter, passCounter};
           return counters;
         }
         passCounter+=1;
+        System.out.println("Passes so far: "+passCounter);
       } // end first loop
       int[] counters = {compareCounter, swapCounter, passCounter};
       return counters;

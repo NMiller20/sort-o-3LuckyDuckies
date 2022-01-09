@@ -5,8 +5,29 @@ Refactor to use helper functions (run to ensure functionality)
 - best case? worst case? for each method
 - Are the algorithms themselves as efficient as possible?
 
+- Figure out best and worst cases for each
+- Confirm it empirically
+- Once confident in the above, refactor the SOPs to display info about the
+- Test multiple sizes
+
 Implementation considerations:
 - How to assess worst case/best case empirically (if we need to)
 - We decided to make the counters values that are returned as an array for every function that modifies data, rather than as
   variables of each instance of Sorts, because if we did them as variables of Sorts, each instance of Sorts would only be able to
   run each function once
+
+Best Cases:
+ ---> Bubble Sort: 1 pass, n-1 compares, 0 swaps. Occurs when elements are already in order
+
+ ---> Selection Sort: n-1 passes, (n-1)(n)/2 compares, n-1 swaps
+      All cases have same number of passes, compares, and swaps for Selection Sort, so there is no worst/best case.
+
+ ---> Insertion Sort: n-1 passes, n-1 compares, 0 swaps. Occurs when elements are already in order
+
+
+Worst Cases:
+---> Bubble Sort:  n-1 passes, (n-1)(n)/2 compares, (n-1)(n)/2 swaps. Occurs when elements are sorted in the opposite order
+
+---> Selection Sort: n-1 passes, (n-1)(n)/2 compares, n-1 swaps
+    All cases have same number of passes, compares, and swaps for Selection Sort, so there is no worst/best case.
+---> Insertion Sort: n-1 passes, (n-1)(n)/2 compares, (n-1)(n)/2 swaps. Occurs when elements are sorted in the opposite order

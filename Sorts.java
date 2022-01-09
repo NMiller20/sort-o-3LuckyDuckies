@@ -93,7 +93,7 @@ public int[] walkElement(ArrayList<Comparable> data, int index) {
     int passCounter = 0;
     int compareCounter = 0;
     int swapCounter = 0;
-    System.out.println("Initial values of swap, compare, pass: "+swapCounter+ " "+compareCounter+" "+passCounter);
+    System.out.println("\n\n\n (Insertion Sort)Initial values of swap, compare, pass: "+swapCounter+ " "+compareCounter+" "+passCounter);
     for ( int partition = 1; partition < data.size(); partition++ ){ // pass both the number of elements that are sorted so far,
                                                       // and the index of the element that is about to be walked to the correct place
       int[] returned = walkElement(data, partition);
@@ -121,16 +121,17 @@ public int[] walkElement(ArrayList<Comparable> data, int index) {
     int passCounter = 0;
     int compareCounter = 0;
     int swapCounter = 0;
-    System.out.println("Initial values of swap, compare, pass: "+swapCounter+ " "+compareCounter+" "+passCounter);
+    System.out.println("\n\n\n (Selection Sort)Initial values of swap, compare, pass: "+swapCounter+ " "+compareCounter+" "+passCounter);
     for(int pass = data.size()-1; pass > 0; pass--) { // refers to the index that will be sorted
       System.out.println( "\nbegin pass " + (data.size()-pass) );//diag
       int maxPos = 0;
 
         for(int i = pass; i > -1; i--) {
+          compareCounter += 1;
+        System.out.println("Compares so far: " +compareCounter);
         	if ( data.get(maxPos).compareTo(data.get(i))==-1 ){
         		maxPos = i;
-            compareCounter += 1;
-          System.out.println("Compares so far: " +compareCounter);
+
         	}
 
 
@@ -158,7 +159,7 @@ public int[] walkElement(ArrayList<Comparable> data, int index) {
     int passCounter = 0;
     int compareCounter = 0;
     int swapCounter = 0;
-    System.out.println("Initial values of swap, compare, pass: "+swapCounter+ " "+compareCounter+" "+passCounter);
+    System.out.println("\n\n\n (Bubble Sort)Initial values of swap, compare, pass: "+swapCounter+ " "+compareCounter+" "+passCounter);
 
       for (int p = 0; p < data.size() - 1; p++) { // iterates through each pass
         //for each pass, reset counter to 0.

@@ -1,15 +1,30 @@
+TNPG: 3 Lucky Duckies, Gloria Lee, Nora Miller, Ziying Jian
+APCS
+L04 -- Never Fear, Big O is Here!
+2022-01-10
+time spent: 3 hrs
+
 DISCO
+- Bubble and Insertion sort's best case scenario is when the list is already in order
+- Selection has no best/worst case scenario
+- Selection sort is most efficient for lists that are ordered backwards
+
 QCC
+- What exactly is big-O classification and how can it be used here?
+- How do we assess best and worst case scenario using the counters. 
+- Why do we need all three counters: compare, swap, and pass?
+
 BUB-QA (Q’s and their A’s from header comment)
+- 
+
 SEL-QA (Q’s and their A’s from header comment)
+-
+
 INS-QA (Q’s and their A’s from header comment)
+- 
 
 To do:
 Refactor to use helper functions (run to ensure functionality)
-- Add counters for swap, pass, compare (run it)
-- Write code processing/displaying info from the counters about swap, pass, compare, and run
-- best case? worst case? for each method
-- Are the algorithms themselves as efficient as possible?
 
 - Figure out best and worst cases for each
 - Confirm it empirically
@@ -22,18 +37,3 @@ Implementation considerations:
   variables of each instance of Sorts, because if we did them as variables of Sorts, each instance of Sorts would only be able to
   run each function once
 
-Best Cases:
- ---> Bubble Sort: 1 pass, n-1 compares, 0 swaps. Occurs when elements are already in order
-
- ---> Selection Sort: n-1 passes, (n-1)(n)/2 compares, n-1 swaps
-      All cases have same number of passes, compares, and swaps for Selection Sort, so there is no worst/best case.
-
- ---> Insertion Sort: n-1 passes, n-1 compares, 0 swaps. Occurs when elements are already in order
-
-
-Worst Cases:
----> Bubble Sort:  n-1 passes, (n-1)(n)/2 compares, (n-1)(n)/2 swaps. Occurs when elements are sorted in the opposite order
-
----> Selection Sort: n-1 passes, (n-1)(n)/2 compares, n-1 swaps
-    All cases have same number of passes, compares, and swaps for Selection Sort, so there is no worst/best case.
----> Insertion Sort: n-1 passes, (n-1)(n)/2 compares, (n-1)(n)/2 swaps. Occurs when elements are sorted in the opposite order

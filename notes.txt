@@ -2,26 +2,65 @@ TNPG: 3 Lucky Duckies, Gloria Lee, Nora Miller, Ziying Jian
 APCS
 L04 -- Never Fear, Big O is Here!
 2022-01-10
-time spent: 3 hrs
+time spent: ~6 hrs
 
 DISCO
 - Bubble and Insertion sort's best case scenario is when the list is already in order
 - Selection has no best/worst case scenario
-- Selection sort is most efficient for lists that are ordered backwards
+- big O classification requires removing all coefficients and constants from the equation.
 
 QCC
-- What exactly is big-O classification and how can it be used here?
-- How do we assess best and worst case scenario using the counters. 
-- Why do we need all three counters: compare, swap, and pass?
+- From calculus, we know that the same thing can have multiple limits. Given that big O notation is defined in terms of limits,
+are there multiple big O notations that would be correct for the same expression? If so, why is O(n^2) better than O(n^2 - n)?
+- How do we assess best and worst case scenario using the counters.
+- Why do we need all three counters: compare, swap, and pass? Would it be accurate to just consider
+comparisons? In all cases, the value of the comparisons counter has been the greatest of the three, and
+in no case would the number of swaps or passes exceed the number of comparisons
 
 BUB-QA (Q’s and their A’s from header comment)
-- 
+* q0: If a pass requires no swaps, what do you know?
+* a0: You know that the ArrayList is sorted in increasing order. All elements are in their final positions.
+* q1: After pass p, what do you know?
+* a1: You know that the last p elements in the ArrayList are guaranteed to be in their final positions.
+* q2: How many passes are needed to completely sort?
+* a2: For a worst case scenario, n-1 passes are needed to finalize all but the first element in the final array.
+By the pidgeonhole principle, this would guarantee that the first element is also in the correct position.
 
 SEL-QA (Q’s and their A’s from header comment)
--
+* q0: How many passes to sort n elements?
+* a0: At most, n-1 passes.
+* q1: How do you know after pass p?
+* a1: After pass p, it is guaranteed that the last p elements are in the correct index.
+* q2: What does a pass boil down to?
+* a2: A pass basically guarantees that one more element is in the correct index.
 
 INS-QA (Q’s and their A’s from header comment)
-- 
+* q0: How many passes to sort n elements?
+* a0: n-1 passes
+* q1: What do you know after pass p?
+* a1: The first p elements are guaranteed to be sorted
+* q2: How will you know when sorted?
+* a2: When the sorted section of the array includes all but the final element -
+because every other element is guaranteed to be in the correct place, so is the final element
+
+(Notes to selves: )
+
+Best Cases:
+ ---> Bubble Sort: 1 pass, n-1 compares, 0 swaps. Occurs when elements are already in order
+
+ ---> Selection Sort: n-1 passes, (n-1)(n)/2 compares, n-1 swaps
+      All cases have same number of passes, compares, and swaps for Selection Sort, so there is no worst/best case.
+
+ ---> Insertion Sort: n-1 passes, n-1 compares, 0 swaps. Occurs when elements are already in order
+
+
+Worst Cases:
+---> Bubble Sort:  n-1 passes, (n-1)(n)/2 compares, (n-1)(n)/2 swaps. Occurs when elements are sorted in the opposite order
+
+---> Selection Sort: n-1 passes, (n-1)(n)/2 compares, n-1 swaps
+    All cases have same number of passes, compares, and swaps for Selection Sort, so there is no worst/best case.
+---> Insertion Sort: n-1 passes, (n-1)(n)/2 compares, (n-1)(n)/2 swaps. Occurs when elements are sorted in the opposite order
+
 
 To do:
 Refactor to use helper functions (run to ensure functionality)
@@ -36,4 +75,3 @@ Implementation considerations:
 - We decided to make the counters values that are returned as an array for every function that modifies data, rather than as
   variables of each instance of Sorts, because if we did them as variables of Sorts, each instance of Sorts would only be able to
   run each function once
-

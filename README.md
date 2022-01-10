@@ -3,40 +3,19 @@
 #### Roster: Gloria Lee, Nora Miller, Ziying Jian
 #### Song of the Week: Lotus by REM
 
-### Data:
-### BubbleSort
-
-| Array length | Type Sort | Best - passes|Best - comparisons| Best - swaps | Worst - passes | Worst - comparisons | Worst - swaps |
-| ----- | --------- | ----- | ---- | --- | ---- | --- | --- |
-| 5 | "Bubble" | 1 | 4 | 0 | 4 | 10 | 10 |
-| 10 | "Bubble" | 1 | 9 | 0 | 9 | 45 | 45 |
-| 50 |"Bubble" | 1 | 49 | 0 | 49| 1225 | 1225 |
-| 100 |"Bubble" | 1 | 99 | 0 | 99| 4950 | 4950 |
-| 200 |"Bubble" | 1 | 199 | 0 | 199 | 19900 | 19900 |
-| 500 |"Bubble" | 1 | 499 | 0 | 499| 124750 | 124750 |
-| 1000 |"Bubble" | 1 | 999 | 0 | 999| 499500 | 499500 |
-|10000 | "Bubble" | 1 | 9999 | 0 | 9999 | 49995000 | 49995000 |
-|5|"Selection"| 4 | 10 | 4 | 4 | 10 | 4 |
-|10|"Selection"| 9 | 45 | 9|   9 | 45 | 9|
-|50|"Selection"| 49| 1225 | 49| 49| 1225 | 49|
-|100|"Selection"| 99| 4950 |  99| 99| 4950 |  99|
-|200|"Selection"| 199 | 19900 | 199 | 199 | 19900 | 199 |
-|500|"Selection"| 499| 124750 | 499| 499| 124750 | 499|
-|1000|"Selection"| 999| 499500 | 999 | 999| 499500 | 999|
-|10000|"Selection"| 9999 | 49995000 | 9999 | 9999 | 49995000 | 9999 |
-|5|"Insertion"| 4 | 4 | 0 | 4 | 10 | 10 |
-|10|"Insertion"| 9 | 9 | 9|   9 | 45 | 45|
-|50|"Insertion"| 49| 49| 0| 49| 1225 | 1225|
-|100|"Insertion"| 99| 99| 0| 99| 4950 |  4950|
-|200|"Insertion"| 199 | 199 | 0 | 199 | 19900 | 19900 |
-|500|"Insertion"| 499| 499 | 0| 499| 124750 | 124750|
-|1000|"Insertion"| 999| 999 | 0 | 999| 499500 | 499500|
-|10000|"Insertion"| 9999 | 9999 | 0 | 9999 | 49995000 | 49995000 |
-
-
-
-
 ### Bubble Sort:
+
+| Array length | Best - passes|Best - comparisons| Best - swaps | Worst - passes | Worst - comparisons | Worst - swaps |
+| ----- |  ----- | ---- | --- | ---- | --- | --- |
+| 5 |  1 | 4 | 0 | 4 | 10 | 10 |
+| 10 | 1 | 9 | 0 | 9 | 45 | 45 |
+| 50 | 1 | 49 | 0 | 49| 1225 | 1225 |
+| 100 | 1 | 99 | 0 | 99| 4950 | 4950 |
+| 200 | 1 | 199 | 0 | 199 | 19900 | 19900 |
+| 500 | 1 | 499 | 0 | 499| 124750 | 124750 |
+| 1000 | 1 | 999 | 0 | 999| 499500 | 499500 |
+|10000 | 1 | 9999 | 0 | 9999 | 49995000 | 49995000 |
+
 #### Best Case:
 * Best case when the array is completely sorted. ex: [0,2,4,6,8]
 * Why? Because **0 swaps** are needed to ensure that this array is sorted
@@ -55,11 +34,35 @@
 
 ### Selection Sort:
 
+| Array length | Best - passes|Best - comparisons| Best - swaps | Worst - passes | Worst - comparisons | Worst - swaps |
+| ----- |  ----- | ---- | --- | ---- | --- | --- |
+|5| 4 | 10 | 4 | 4 | 10 | 4 |
+|10| 9 | 45 | 9|   9 | 45 | 9|
+|50| 49| 1225 | 49| 49| 1225 | 49|
+|100| 99| 4950 |  99| 99| 4950 |  99|
+|200| 199 | 19900 | 199 | 199 | 19900 | 199 |
+|500| 499| 124750 | 499| 499| 124750 | 499|
+|1000| 999| 499500 | 999 | 999| 499500 | 999|
+|10000| 9999 | 49995000 | 9999 | 9999 | 49995000 | 9999 |
+
+
 * All cases are treated the same - there is no best or worst case. This is because for any array of length n, the algorithm needs to search for the 1st through (n-1)th highest elements, and place each in the correct index. This requires n-1 passes because swapping with the same index is possible as well.
 * In each pass x, only one swap is needed to place the nth highest element in the correct index - this value is swapped with the element that is already in said index. So **n-1 passes** are needed in total because by default, the last element not considered will be in its sorted position.
 * **Time Complexity big-O classification: O(n) swaps, O(n) passes, O(n^2) comparisons. Thus, the algorithm as a whole is O(n^2)**
 
 ### Insertion Sort:
+
+| Array length | Best - passes|Best - comparisons| Best - swaps | Worst - passes | Worst - comparisons | Worst - swaps |
+| ----- |  ----- | ---- | --- | ---- | --- | --- |
+|5| 4 | 4 | 0 | 4 | 10 | 10 |
+|10| 9 | 9 | 9|   9 | 45 | 45|
+|50| 49| 49| 0| 49| 1225 | 1225|
+|100| 99| 99| 0| 99| 4950 |  4950|
+|200| 199 | 199 | 0 | 199 | 19900 | 19900 |
+|500| 499| 499 | 0| 499| 124750 | 124750|
+|1000| 999| 999 | 0 | 999| 499500 | 499500|
+|10000| 9999 | 9999 | 0 | 9999 | 49995000 | 49995000 |
+
 #### Best Case:
 * Best case when the array is completely sorted. ex: [0,2,4,6,8]
 * Why? Because 0 swaps are needed to ensure that this array is sorted.

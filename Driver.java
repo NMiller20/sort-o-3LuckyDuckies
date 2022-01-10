@@ -53,23 +53,33 @@ public class Driver{
     testSort(5, "best");
     System.out.println("\nSize 10 ArrayList:\n\n");
     testSort(10, "best");
-    // System.out.println("\nSize 50 ArrayList:\n\n");
-    // testSort(50, "best");
-    // System.out.println("\nSize 100 ArrayList:\n\n");
-    // testSort(100, "best");
-    // System.out.println("\nSize 200 ArrayList:\n\n");
-    // testSort(200, "best");
+    System.out.println("\nSize 50 ArrayList:\n\n");
+    testSort(50, "best");
+    System.out.println("\nSize 100 ArrayList:\n\n");
+    testSort(100, "best");
+    System.out.println("\nSize 200 ArrayList:\n\n");
+    testSort(200, "best");
+    System.out.println("\nSize 1000 ArrayList:\n\n");
+    testSort(1000,"best");
+    System.out.println("\nSize 10000 ArrayList:\n\n");
+    testSort(10000,"best");
     System.out.println("-------------WORST CASES:--------------------");
     System.out.println("\nSize 5 ArrayList:\n\n");
     testSort(5, "worst");
     System.out.println("\nSize 10 ArrayList:\n\n");
     testSort(10, "worst");
-    // System.out.println("\nSize 50 ArrayList:\n\n");
-    // testSort(50, "worst");
-    // System.out.println("\nSize 100 ArrayList:\n\n");
-    // testSort(100, "worst");
-    // System.out.println("\nSize 200 ArrayList:\n\n");
-    // testSort(200, "worst");
+    System.out.println("\nSize 50 ArrayList:\n\n");
+    testSort(50, "worst");
+    System.out.println("\nSize 100 ArrayList:\n\n");
+    testSort(100, "worst");
+    System.out.println("\nSize 200 ArrayList:\n\n");
+    testSort(200, "worst");
+    System.out.println("\nSize 1000 ArrayList:\n\n");
+    testSort(1000,"worst");
+    System.out.println("\nSize 10000 ArrayList:\n\n");
+    testSort(10000,"worst");
+    
+    //------------------------EVERYTHING BELOW IS NOT RUN AND IS COMMENTED OUT-----------------------------------
 /*
     Sorts pochmann = new Sorts();
 

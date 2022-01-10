@@ -24,10 +24,12 @@ public class Driver{
       ascending(glen, length);
       ascending(bob, length);
       ascending(mike, length);
+      System.out.println("ASCENDING LIST");
     } else{
       descending(glen, length);
       descending(bob, length);
       descending(mike, length);
+      System.out.println("DESCENDING LIST");
     }
     if (length <= 50){
       System.out.println(glen); }
@@ -56,12 +58,12 @@ public class Driver{
       ascending(glen, length);
       ascending(bob, length);
       ascending(mike, length);
-      System.out.println("Ascending lists");
+      System.out.println("ASCENDING LIST");
     } else{
       descending(glen, length);
       descending(bob, length);
       descending(mike, length);
-      System.out.println("Descending lists");
+      System.out.println("DESCENDING LIST");
     }
 
     int[] bscounters = pochmann.bubbleSortV(glen);

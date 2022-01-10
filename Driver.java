@@ -29,7 +29,8 @@ public class Driver{
       descending(bob, length);
       descending(mike, length);
     }
-    System.out.println(glen);
+    if (length <= 50){
+      System.out.println(glen); }
     int[] bscounters = pochmann.bubbleSortV(glen);
     System.out.println("Bubble Sort COMPARE COUNTER: " + bscounters[0] + "\nSWAP COUNTER: " + bscounters[1] + "\nPASS COUNTER: "+bscounters[2]);
     System.out.println( "ArrayList after sorting:\n" + glen );

@@ -45,6 +45,34 @@ public class Driver{
     System.out.println( "ArrayList mike after sorting:\n" + mike );
 
   }
+  
+  public static void testSortBig(int length, String bestOrWorst){
+    Sorts pochmann = new Sorts();
+
+    ArrayList glen = new ArrayList<Comparable>();
+    ArrayList bob = new ArrayList<Comparable>();
+    ArrayList mike = new ArrayList<Comparable>();
+    if (bestOrWorst == "best"){
+      ascending(glen, length);
+      ascending(bob, length);
+      ascending(mike, length);
+    } else{
+      descending(glen, length);
+      descending(bob, length);
+      descending(mike, length);
+    }
+
+    int[] bscounters = pochmann.bubbleSortV(glen);
+    System.out.println("Bubble Sort COMPARE COUNTER: " + bscounters[0] + "\nSWAP COUNTER: " + bscounters[1] + "\nPASS COUNTER: "+bscounters[2]);
+
+
+    int[] sscounters = pochmann.selectionSortV(bob);
+    System.out.println("Selection Sort COMPARE COUNTER: " + sscounters[0] + "\nSWAP COUNTER: " + sscounters[1] + "\nPASS COUNTER: "+sscounters[2]);
+
+    int[] iscounters = pochmann.insertionSortV(mike);
+    System.out.println("Insertion Sort COMPARE COUNTER: " + iscounters[0] + "\nSWAP COUNTER: " + iscounters[1] + "\nPASS COUNTER: "+iscounters[2]);
+
+  }
 
   public static void main( String [] args )
   {
@@ -55,13 +83,13 @@ public class Driver{
     System.out.println("\nSize 10 ArrayList:\n\n");
     testSort(10, "best");
     System.out.println("\nSize 50 ArrayList:\n\n");
-    testSort(50, "best");
+    testSortBig(50, "best");
     System.out.println("\nSize 100 ArrayList:\n\n");
-    testSort(100, "best");
+    testSortBig(100, "best");
     System.out.println("\nSize 200 ArrayList:\n\n");
-    testSort(200, "best");
+    testSortBig(200, "best");
     System.out.println("\nSize 1000 ArrayList:\n\n");
-    testSort(1000,"best");
+    testSortBig(1000,"best");
     System.out.println("\nSize 10000 ArrayList:\n\n");
     testSort(10000,"best");
     System.out.println("-------------WORST CASES:--------------------");
@@ -70,15 +98,15 @@ public class Driver{
     System.out.println("\nSize 10 ArrayList:\n\n");
     testSort(10, "worst");
     System.out.println("\nSize 50 ArrayList:\n\n");
-    testSort(50, "worst");
+    testSortBig(50, "worst");
     System.out.println("\nSize 100 ArrayList:\n\n");
-    testSort(100, "worst");
+    testSortBig(100, "worst");
     System.out.println("\nSize 200 ArrayList:\n\n");
-    testSort(200, "worst");
+    testSortBig(200, "worst");
     System.out.println("\nSize 1000 ArrayList:\n\n");
-    testSort(1000,"worst");
+    testSortBig(1000,"worst");
     System.out.println("\nSize 10000 ArrayList:\n\n");
-    testSort(10000,"worst");
+    testSortBig(10000,"worst");
     
     //------------------------EVERYTHING BELOW IS NOT RUN AND IS COMMENTED OUT-----------------------------------
 /*

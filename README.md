@@ -14,9 +14,9 @@
 
 #### Worst Case:
 * Worst case when the array is in decreasing order (completely unsorted). ex: [8,6,4,2,0]
-* In each pass, you move one more element to the right until it reaches its final position. If the array is furthest from sorted, no elements start off in the final position, and they must all be moved. Thus, n-1 passes are needed. 
-* 
-* swapped over right and right again until they reach that final position in each swap. Because the array is in decreasing order, elements must swap the most amount of times to get to their final positions.
+* In each pass, you move one more element to the right until it reaches its final position. If the array is furthest from sorted, no elements start off in the final position, and all but the very last element must be moved. Thus, n passes are needed. 
+* In each pass x, x-1 comparisons and swaps need to be made to ensure that all of the elements that aren't yet guaranteed to be in the correct position are swapped as needed. If you were to add up all of the comparisons and swaps, you would get (n-1 + (n-2 ... (1), which is (n-1)(n)/2. Removing all constants and coefficients from this expression to account for differences in different computers, you get n^2
+* **Time Complexity big-O classification: O(n^2) swaps, O(n passes, O(n^2) comparisons. Thus, the algorithm as a whole is 
 
 
 Best Cases:

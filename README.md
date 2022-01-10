@@ -26,6 +26,15 @@
 * In each pass x, x-1 comparisons and swaps need to be made to 'walk' the xth element to the correct position. Adding up the number of comparisons and simplifying the expression as for bubble sort, you get n^2.
 * **Time Complexity big-O classification: O(n^2) swaps, O(n) passes, O(n^2) comparisons. Thus, the algorithm as a whole is O(n^2)**
 
+### Insertion Sort: 
+#### Best Case:
+* Best case when the array is completely sorted. ex: [0,2,4,6,8]
+* 0 swaps are needed to ensure that this array is sorted
+* Because insertion sort works by maintaining n elements at the end of an array which are guaranteed to be sorted, and each pass increases that number by one, one pass is needed for every element besides the last. 
+* In each pass, if the element being added to the sorted section of the element is already in the correct position, only one comparison - of that element to the highest indexed element in the sorted section - is needed to complete the pass. Thus, n-1 comparisons are needed in total. 
+* **Time Complexity big-O classification: O(1) swaps, O(n) passes, O(n) comparisons. Thus, the algorithm as a whole is O(n)**
+
+
 
 
 Best Cases:

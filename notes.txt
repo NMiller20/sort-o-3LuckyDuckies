@@ -1,3 +1,9 @@
+DISCO
+QCC
+BUB-QA (Q’s and their A’s from header comment)
+SEL-QA (Q’s and their A’s from header comment)
+INS-QA (Q’s and their A’s from header comment)
+
 To do:
 Refactor to use helper functions (run to ensure functionality)
 - Add counters for swap, pass, compare (run it)

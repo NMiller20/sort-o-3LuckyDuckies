@@ -9,10 +9,12 @@
 * Why? Because 0 swaps are needed to ensure that the array is sorted, and only one pass is necessary.
 * In the best case, bubble sort swaps 0 times, makes 1 pass, and makes n-1 comparisons. 
 * Why? From best test case data: arraysize 5 -> 4 comparisons, arraysize 10 -> 9 comparisons, array size 50 -> 49 comparisons etc. After the array is traversed with no swaps, the array is finalized as sorted and one pass is made.
-* Time Complexity big-O classification: O(1) swaps, O(1) passes, O(n) comparisons. 
+* **Time Complexity big-O classification: O(1) swaps, O(1) passes, O(n) comparisons.**
+
 
 #### Worst Case:
 * Worst case when the array is in decreasing order (completely unsorted). ex: [8,6,4,2,0]
+* Why? Because in each pass, you move one more element to the right until it reaches its final position. So if the array is completely unsorted, no elements start off in the final position, and they must all be swapped over right and right again until they reach that final position in each swap. Because the array is in decreasing order, elements must swap the most amount of times to get to their final positions.
 
 
 Best Cases:

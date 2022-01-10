@@ -15,7 +15,7 @@
 #### Worst Case:
 * Worst case when the array is in decreasing order (completely unsorted). ex: [8,6,4,2,0]
 
-* Why? In bubble sort, traversing from left to right, you swap each element with its adjacent right until the greatest unfinalized element is pushed to its final position per pass. In each pass, you push one more element to the right until it reaches its final position. Therefore, if array is in decreasing order, elements start off furthest away from their final position, and maximum possible swaps must be made to push each element to its finalized position. All but the very first element in the final array will be finalized, so n-1 passes are needed.
+* Why? Because in bubble sort, traversing from left to right, you swap each element with its adjacent right until the greatest unfinalized element is pushed to its final position per pass. In each pass, you push one more element to the right until it reaches its final position. Therefore, if array is in decreasing order, elements start off furthest away from their final position, and maximum possible swaps must be made to push each element to its finalized position. All but the very first element in the final array will be finalized, so n-1 passes are needed.
 
 * In each pass x, x-1 comparisons and swaps need to be made to ensure that all of the elements that aren't yet guaranteed to be in the correct position are swapped as needed. If you were to add up all of the comparisons and swaps, you would get (n-1 + (n-2 ... (1), which is (n-1)(n)/2. Removing all constants and coefficients from this expression, you get n^2.
 * **Time Complexity big-O classification: O(n^2) swaps, O(n) passes, O(n^2) comparisons. Thus, the algorithm as a whole is O(n^2)**
@@ -26,14 +26,16 @@
 * In each pass x, x-1 comparisons and swaps need to be made to 'walk' the xth element to the correct position. Adding up the number of comparisons and simplifying the expression as for bubble sort, you get n^2.
 * **Time Complexity big-O classification: O(n^2) swaps, O(n) passes, O(n^2) comparisons. Thus, the algorithm as a whole is O(n^2)**
 
-### Insertion Sort: 
+### Insertion Sort:
 #### Best Case:
 * Best case when the array is completely sorted. ex: [0,2,4,6,8]
-* 0 swaps are needed to ensure that this array is sorted
-* Because insertion sort works by maintaining n elements at the end of an array which are guaranteed to be sorted, and each pass increases that number by one, one pass is needed for every element besides the last. 
-* In each pass, if the element being added to the sorted section of the element is already in the correct position, only one comparison - of that element to the highest indexed element in the sorted section - is needed to complete the pass. Thus, n-1 comparisons are needed in total. 
+* Why? Because 0 swaps are needed to ensure that this array is sorted
+* Because insertion sort works by maintaining n elements at the end of an array which are guaranteed to be sorted, and each pass increases that number by one, one pass is needed for every element besides the last.
+* In each pass, if the element being added to the sorted section of the element is already in the correct position, only one comparison - of that element to the highest indexed element in the sorted section - is needed to complete the pass. Thus, n-1 comparisons are needed in total.
 * **Time Complexity big-O classification: O(1) swaps, O(n) passes, O(n) comparisons. Thus, the algorithm as a whole is O(n)**
 
+#### Worst Case:
+* Worst case when the array is completely unsorted (decreasing order) ex: [8,6,4,2,0]
 
 
 

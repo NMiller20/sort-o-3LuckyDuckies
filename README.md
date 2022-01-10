@@ -22,7 +22,7 @@
 
 * Why? In bubble sort, traversing from left to right, you swap each element with its adjacent right until the greatest unfinalized element is pushed to its final position per pass. In each pass, you push one more element to the right until it reaches its final position. Therefore, if array is in decreasing order, elements start off furthest away from their final position, and maximum possible swaps must be made to push each element to its finalized position. All but the very first element in the final array will be finalized, so n-1 passes are needed.
 
-* In each pass x, x-1 comparisons and swaps need to be made to ensure that all of the elements that aren't yet guaranteed to be in the correct position are swapped as needed. If you were to add up all of the comparisons and swaps, you would get (n-1 + (n-2 ... (1), which is (n-1)(n)/2. Removing all constants and coefficients from this expression to account for differences in different computers, you get n^2
+* In each pass x, x-1 comparisons and swaps need to be made to ensure that all of the elements that aren't yet guaranteed to be in the correct position are swapped as needed. If you were to add up all of the comparisons and swaps, you would get (n-1 + (n-2 ... (1), which is (n-1)(n)/2. Removing all constants and coefficients from this expression, you get n^2.
 * **Time Complexity big-O classification: O(n^2) swaps, O(n) passes, O(n^2) comparisons. Thus, the algorithm as a whole is O(n^2)**
 
 ### Selection Sort:

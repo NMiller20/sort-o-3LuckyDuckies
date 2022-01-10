@@ -93,7 +93,7 @@ public class Driver{
     System.out.println("\nSize 1000 ArrayList:\n\n");
     testSortBig(1000,"best");
     System.out.println("\nSize 10000 ArrayList:\n\n");
-    testSort(10000,"best");
+    testSortBig(10000,"best");
     System.out.println("-------------WORST CASES:--------------------");
     System.out.println("\nSize 5 ArrayList:\n\n");
     testSort(5, "worst");
